@@ -4,21 +4,45 @@ using UnityEngine;
 
 public class MyFirstScript : MonoBehaviour
 {
-    /*
-     This is a multiline comment;
-     4 variables with the player information
-    */
-//This variable says the PLAYER'S AGE
-    public int playerAge = 23; 
-
-//This variable says the PLAYER'S SPEED
+    //variables
+    public int playerAge = 23;
     public float playerSpeed = 3.125f;
+    public string playerName = "Masepa";
+    public int playerLives = 3;
+    private string welcome = "Welcome to the race";
+    public string message = "This is your puntiation";
+    public int inicialPoints;
+    public int finalPoints = 1000;
+    [SerializeField] private bool gameOver = false;
 
-//This variable says the PLAYER NICKNAME
-    public string playerName = "masepa"; 
 
-//This variable says if the player has lost
-    [SerializeField]private bool gameOver = false; 
+    public float x = 2;
+    public float y = 3;
+    private float result;
+
+    private void Start()
+    {
+       // result = x + y;
+        x += y;
+        Debug.Log(string.Format(
+            "You have killed a mushroom and a butterfly, so you have now {0} points.", x));
+
+       Debug.Log(welcome);
+       Debug.Log(string.Format(
+            "{0}, you have {1} lives and your inicial punctuation is {2}.", 
+            playerName, playerLives, inicialPoints));
+        Debug.Log($"You have to reach {finalPoints} to win");
+        
+    }
+
+
+   
+
+
+
+
+
+
 }
 
 

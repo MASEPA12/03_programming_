@@ -4,5 +4,14 @@ using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
-    private int wheels = 4;
+    //This function save the number of wheels of the vehicle
+    [SerializeField] private int wheels = 4;
+    [SerializeField] private string name;
+   
+    private void Start()
+        {
+        Debug.Log($"The {name} has {wheels} wheels");
+    }   
+
 }
+
